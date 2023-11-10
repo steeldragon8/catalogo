@@ -1,0 +1,70 @@
+---
+import { Image } from "astro:assets";
+import logoDark from "../assets/logo-white.svg";
+
+import "../styles/styles.css";
+---
+
+<footer class="bg-stone-800 py-24">
+    <section
+        class="wrapper grid gap-12 justify-items-center footer-area md:footer-area-md md:grid-cols-3 md:justify-items-stretch"
+    >
+        <!-- <form
+            action=""
+            class="flex gap-4 w-full min-w-[100px] [grid-area:form]"
+        >
+            <input
+                type="email"
+                placeholder="Updates in your inbox..."
+                class="min-w-[50px] flex-1 rounded-full px-4"
+            />
+
+            <input
+                type="submit"
+                value="GO"
+                class="py-3 px-8 bg-bright-red rounded-full text-white"
+            />
+        </form> -->
+
+        <nav
+            class="grid grid-cols-[max-content_max-content] gap-y-4 justify-between text-white w-4/5 [grid-area:navigation] md:w-full"
+        >
+            <a href="/">Inicio</a>
+            <a href="/catalog">Catálogo</a>
+            <a href="/blog">Blog</a>
+            <a href="/about">Acerca de</a>
+        </nav>
+
+        <!-- <div
+            class="flex flex-wrap gap-4 justify-between w-full [grid-area:social-media]"
+        >
+            <a href="">
+                <img src="./images/icon-facebook.svg" alt="" class="w-8" />
+            </a>
+
+            <a href="">
+                <img src="./images/icon-youtube.svg" alt="" class="w-8" />
+            </a>
+
+            <a href="">
+                <img src="./images/icon-twitter.svg" alt="" class="w-8" />
+            </a>
+
+            <a href="">
+                <img src="./images/icon-pinterest.svg" alt="" class="w-8" />
+            </a>
+
+            <a href="">
+                <img src="./images/icon-instagram.svg" alt="" class="w-8" />
+            </a>
+        </div> -->
+
+        <a href="#">
+            <Image src={logoDark} alt="" class="[grid-area:logo]" />
+        </a>
+
+        <p class="text-gray-400 text-center [grid-area:copy] md:text-right">
+            Copyright 2023. Todos los derechos reservados.
+        </p>
+    </section>
+</footer>
