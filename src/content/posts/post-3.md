@@ -1,5 +1,5 @@
 ---
-title: 'Criterios específicos para remover una eslinga redonda de uso'
+title: 'Criterios específicos para remover una eslinga de cadena de uso'
 pubDate: 2014-10-17
 description: 'Este es la primera publicación de mi nuevo blog Astro.'
 author: 'Cabuyería'
@@ -7,25 +7,29 @@ image: './assets/eslingas-600x600.jpg'
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-## Las eslingas redondas deben de retirarse de servicio si se presenta lo siguiente::
+Las eslingas de cadena deben de retirarse de servicio si se presenta lo siguiente:
 
-- Etiqueta ilegible o faltante.
+- Placa ilegible o faltante.
 
-- Quemaduras acidas o causticas.
+- Cadena o Accesorios rotos o con grietas.
 
 - Si no se sabe la capacidad estipulada de la eslinga así como si falta o no el legible la etiqueta identificadora de la eslinga.
 
-- Si esta quemada o dañada por algún acido o detergente.
+- Desgaste superior al 10% en cualquier parte de la cadena o de los accesorios.
 
-- Si cuenta con algún tipo de quemadura, carbonización o residuos de soldadura.
+- Elongación superior al 5% en los eslabones de la cadena o los accesorios.
 
-- Si tiene hoyos, rasgaduras, cortes o partículas incrustadas en la cubierta de la eslinga.
+- Dobladuras o deformación en los eslabones de la cadena o los accesorios.
 
-- Si están dañadas o rotas las fibras interiores de la eslinga.
+- Si cuenta con corrosión u oxido excesivo.
 
-- Demasiado desgaste por abrasivos.
+- Si los eslabones de la cadena o los accesorios no se pueden mover libremente.
+
+- Salpicaduras de soldadura.
 
 - Nudos en cualquier parte de la eslinga.
+
+- Decoloración en cualquier parte de la eslinga lo cual indica daño por contacto con químicos.
 
 - Accesorios en mal estado por desgaste, corrosión, roturas y deformaciones.
 
@@ -34,3 +38,5 @@ tags: ["astro", "bloguear", "aprender en público"]
 - Para Accesorios vea ASME B.30.26 criterios de remoción.
 
 - Cualquier condición que cause duda acerca de la capacidad de carga de la eslinga.
+
+![Ejemplos de eslingas de cadena que deben ser removidas del servicio](../../assets/post-3.png)

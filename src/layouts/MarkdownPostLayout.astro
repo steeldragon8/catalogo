@@ -8,53 +8,52 @@ const { frontmatter } = Astro.props;
 
 <BaseLayout pageTitle={frontmatter.title}>
     <main>
-        <img
-            src={frontmatter.image.url}
-            width="300"
-            alt={frontmatter.image.alt}
-        />
 
-        <article class="py-10 mx-8 prose md:prose-md">
-            <!-- <Image
-                src={frontmatter.image}
-                alt={frontmatter.title}
-                width={600}
-                height={600 / 1.5}
-                class="rounded-2xl shadow-xl mb-6 aspect-thumbnail object-cover"
-            /> -->
-            <h1
-                transition:animate="slide"
-                class="text-4xl text-zinc-900 text-center mb-4 font-semibold inline-block"
-            >
-                {frontmatter.title}
-            </h1>
-            <slot transition:animate={fade({ duration: "2s" })} class="text-zinc-500 text-2xl mb-12 line-clamp-2" />
-            <div class="flex flex-row justify-between">
-                <p>
-                    Fecha de publicación: {
-                        frontmatter.pubDate.toString().slice(0, 10)
+        <section class="wrapper py-24 grid gap-12 md:justify-items-center">
+
+            <article class="prose md:prose-lg">
+                <!-- <Image
+                    src={frontmatter.cover}
+                    alt={frontmatter.coverAlt}
+                    width={600}
+                    height={600 / 1.5}
+                    class="rounded-2xl shadow-xl mb-6 aspect-thumbnail object-cover"
+                /> -->
+                <h1
+                    transition:animate="slide"
+                    class="text-4xl text-zinc-900 text-center mb-8 font-semibold inline-block"
+                >
+                    {frontmatter.title}
+                </h1>
+                <slot class="text-zinc-500 text-2xl line-clamp-2 mb-8" />
+                <div class="flex flex-row justify-between mb-8">
+                    <p>
+                        Fecha de publicación: {
+                            frontmatter.pubDate.toString().slice(0, 10)
+                        }
+                    </p>
+                    <p>
+                        Escrito por: <a href="/about" class="no-underline"
+                            >{frontmatter.author}</a
+                        >
+                    </p>
+                </div>
+                <div class="flex flex-row gap-4 justify-center">
+                    {
+                        frontmatter.tags.map((tag) => (
+                            <p class="border-solid border-[1px] border-blue-800 rounded-lg py-2 px-4 text-base bg-white hover:bg-blue-200">
+                                <a
+                                    href={`/tags/${tag}`}
+                                    class="text-blue-950 no-underline"
+                                >
+                                    {tag}
+                                </a>
+                            </p>
+                        ))
                     }
-                </p>
-                <p>
-                    Escrito por: <a href="/about" class="no-underline"
-                        >{frontmatter.author}</a
-                    >
-                </p>
-            </div>
-            <div class="flex flex-row justify-items-center">
-                {
-                    frontmatter.tags.map((tag) => (
-                        <p class="m-2 border-solid border-[1px] border-blue-800 rounded-lg py-2 px-4 text-base bg-white hover:bg-blue-200">
-                            <a
-                                href={`/tags/${tag}`}
-                                class="text-blue-950 no-underline"
-                            >
-                                {tag}
-                            </a>
-                        </p>
-                    ))
-                }
-            </div>
-        </article>
+                </div>
+            </article>
+
+        </section>
     </main>
 </BaseLayout>

@@ -1,9 +1,115 @@
 ---
+import CardCatalog from "../components/CardCatalog.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { Image } from "astro:assets";
+import containers from "../assets/containers.jpg"
+import fetter from "../assets/fetter.webp"
+import steelCableSling from "../assets/steel-cable-sling.jpg"
+import slings from "../assets/slings.jpg"
+import steelChains from "../assets/steel-chains.webp"
+import accesories from "../assets/accesories.jpg"
 ---
 
 <BaseLayout pageTitle="Catálogo">
     <main>
-        <h1>Este es el Catálogo</h1>
+        <h1 transition:animate="slide" class="wrapper grid gap-8 text-center text-3xl md:text-4xl md:mt-24 font-semibold mt-6">Catálogo de Herramientas</h1>
+        <section transition:animate="slide" class="wrapper py-14 md:py-24 grid gap-12 md:grid-cols-2 md:text-left">
+            <article>
+                <div class="w-full rounded-t-xl overflow-hidden">
+                    <a href="/">
+                        <Image 
+                            src={containers}
+                            alt="Carga y Descarga de Contenedores"
+                            class="transition-all duration-700 hover:scale-125 w-full"
+                        />
+                    </a>
+                </div>
+                <div class="py-14 px-16 bg-gray-200 rounded-b-xl">
+                    <a href="/" class="text-3xl mx-auto">
+                        Spreaders y Separadores
+                    </a>
+                </div>
+            </article>
+            <article>
+                <div class="w-full rounded-t-xl overflow-hidden">
+                    <a href="/">
+                        <Image 
+                            src={fetter}
+                            alt="Carga y Descarga de Contenedores"
+                            class="transition-all duration-700 hover:scale-125 w-full"
+                        />
+                    </a>
+                </div>
+                <div class="py-14 px-16 bg-gray-200 rounded-b-xl">
+                    <a href="/" class="text-3xl mx-auto">
+                        Ganchos y Grilletes
+                    </a>
+                </div>
+            </article>
+            <article>
+                <div class="w-full rounded-t-xl overflow-hidden">
+                    <a href="/">
+                        <Image 
+                            src={steelCableSling}
+                            alt="Carga y Descarga de Contenedores"
+                            class="transition-all duration-700 hover:scale-125 w-full"
+                        />
+                    </a>
+                </div>
+                <div class="py-14 px-16 bg-gray-200 rounded-b-xl">
+                    <a href="/" class="text-3xl mx-auto">
+                        Estrobos
+                    </a>
+                </div>
+            </article>
+            <article>
+                <div class="w-full rounded-t-xl overflow-hidden">
+                    <a href="/">
+                        <Image 
+                            src={slings}
+                            alt="Carga y Descarga de Contenedores"
+                            class="transition-all duration-700 hover:scale-125 w-full"
+                        />
+                    </a>
+                </div>
+                <div class="py-14 px-16 bg-gray-200 rounded-b-xl">
+                    <a href="/" class="text-3xl mx-auto">
+                        Eslingas
+                    </a>
+                </div>
+            </article>
+            <article>
+                <div class="w-full rounded-t-xl overflow-hidden">
+                    <a href="/">
+                        <Image 
+                            src={steelChains}
+                            alt="Carga y Descarga de Contenedores"
+                            class="transition-all duration-700 hover:scale-125 w-full"
+                        />
+                    </a>
+                </div>
+                <div class="py-14 px-16 bg-gray-200 rounded-b-xl">
+                    <a href="/" class="text-3xl mx-auto">
+                        Cadenas
+                    </a>
+                </div>
+            </article>
+            <article>
+                <div class="w-full rounded-t-xl overflow-hidden">
+                    <a href="/">
+                        <Image 
+                            src={accesories}
+                            alt="Carga y Descarga de Contenedores"
+                            class="transition-all duration-700 hover:scale-125 w-full"
+                        />
+                    </a>
+                </div>
+                <div class="py-14 px-16 bg-gray-200 rounded-b-xl">
+                    <a href="/" class="text-3xl">
+                        Herramientas varias
+                    </a>
+                </div>
+            </article>
+        </section>
     </main>
 </BaseLayout>

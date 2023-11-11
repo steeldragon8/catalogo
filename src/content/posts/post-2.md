@@ -7,7 +7,7 @@ image: './assets/eslingas-600x600.jpg'
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-## Las eslingas redondas deben de retirarse de servicio si se presenta lo siguiente::
+Las eslingas redondas deben de retirarse de servicio si se presenta lo siguiente:
 
 - Etiqueta ilegible o faltante.
 
@@ -34,3 +34,5 @@ tags: ["astro", "bloguear", "aprender en público"]
 - Para Accesorios vea ASME B.30.26 criterios de remoción.
 
 - Cualquier condición que cause duda acerca de la capacidad de carga de la eslinga.
+
+![Elemplos de eslingas redondas que deben ser removidas del servicio](../../assets/post-2.png)

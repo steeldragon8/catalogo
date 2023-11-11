@@ -14,7 +14,7 @@ import Hero from "../components/Hero.astro";
 
                 <h2 class="text-3xl font-bold text-blue-950 mb-6 md:text-4xl">¿Qué es Cabuyería?</h2>
 
-                <p class="text-gray-600"><span class="font-bold">Cabuyería</span> es un área destinada al almacenaje y protección de los aditamentos, herramientas y materiales que se utilizan para la realización del servicio. En Cabuyería, los materiales y herramientas se mantienen a resguardo y se ubican de acuerdo al tipo de estos.</p>
+                <p class="text-gray-600 md:text-2xl"><span class="font-bold">Cabuyería</span> es un área destinada al almacenaje y protección de los aditamentos, herramientas y materiales que se utilizan para la realización del servicio. En Cabuyería, los materiales y herramientas se mantienen a resguardo y se ubican de acuerdo al tipo de estos.</p>
 
             </article>
 
@@ -29,13 +29,13 @@ import Hero from "../components/Hero.astro";
                         </span>
 
                         <span class="flex-1 p-2">
-                            Track company-wide progress
+                            Clasificación de herramientas
                         </span>
 
                     </p>
 
                     <p class="text-gray-600 text-left">
-                        See how your day-to-day tasks fit into the wider vision.Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture again.
+                        Para su fácil identificación se clasifican de acuerdo a categorías, señalando sus capacidades, longitudes y medidas de las mismas.
                     </p>
 
                 </article>
@@ -49,13 +49,13 @@ import Hero from "../components/Hero.astro";
                         </span>
 
                         <span class="flex-1 p-2">
-                            Track company-wide progress
+                            Distribución
                         </span>
                         
                     </p>
 
                     <p class="text-gray-600 text-left">
-                        See how your day-to-day tasks fit into the wider vision.Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture again.
+                        Se atiende a clientes internos y externos para proporcionar las herramientas y materiales para la realización de todas las maniobras de carga y descarga en buques y patios.
                     </p>
 
                 </article>
@@ -69,13 +69,13 @@ import Hero from "../components/Hero.astro";
                         </span>
 
                         <span class="flex-1 p-2">
-                            Track company-wide progress
+                            Gestión de Inventarios
                         </span>
                         
                     </p>
 
                     <p class="text-gray-600 text-left">
-                        See how your day-to-day tasks fit into the wider vision.Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture again.
+                        Se controla con mayor exactitud entradas y salidas; ademas de tener previsto la recepción o entrega de material y herramientas, así como mantener las condiciones ideonias para hacerlo.
                     </p>
 
                 </article>
@@ -83,31 +83,6 @@ import Hero from "../components/Hero.astro";
             </div>
 
         </section>
-
-        <!-- <section class="wrapper text-center py-24 max-w-lg mx-auto md:max-w-xl">
-
-            <h2 class="text-3xl font-bold text-very-dark-blue md:text-4xl">
-                What they've said
-            </h2>
-
-            <div class="mt-24 mb-14">
-
-                <article class="bg-vary-light-gray pt-16 pb-12 px-4 relative">
-
-                    <img src="./images/avatar-ali.png" alt="" class="absolute w-24 aspect-square -top-12 inset-x-0 mx-auto">
-
-                    <h3 class="text-xl mb-4 pt-2 font-bold text-very-dark-blue">Ali Bravo</h3>
-
-                    <p class="text-dark-grayish-blue">
-                        "We have been able to cancel so many other subscriptions since using Manage. There is no more cross-channel confusion and everyone is much more focused."
-                    </p>
-
-                </article>
-            </div>
-
-            <a href="#" class="button mx-auto shadow-xl shadow-bright-red/30">Ger Started</a>
-
-        </section> -->
 
         <section class="bg-blue-900 font-bold">
 
@@ -117,7 +92,7 @@ import Hero from "../components/Hero.astro";
                     Especificaciones técnicas de herramienta.
                 </h2>
 
-                <a href="#" class="button text-orange-200 bg-orange-600 mx-auto md:mx-0 md:justify-self-end">
+                <a href="/catalog" class="button text-orange-200 bg-orange-600 mx-auto md:mx-0 md:justify-self-end">
                     Explorar Catálogo
                 </a>
 
@@ -126,62 +101,3 @@ import Hero from "../components/Hero.astro";
         </section>
 	</main>
 </BaseLayout>
-
-<!-- <style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-</style> -->

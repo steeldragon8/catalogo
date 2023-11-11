@@ -1,5 +1,5 @@
 ---
-title: 'Criterios específicos para remover una eslinga redonda de uso'
+title: 'Criterios específicos para remover un estrobo de cable de acero de uso'
 pubDate: 2014-10-17
 description: 'Este es la primera publicación de mi nuevo blog Astro.'
 author: 'Cabuyería'
@@ -7,25 +7,23 @@ image: './assets/eslingas-600x600.jpg'
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-## Las eslingas redondas deben de retirarse de servicio si se presenta lo siguiente::
+Los estrobos de cabe de acero deben de retirarse de servicio si se presenta lo siguiente:
 
-- Etiqueta ilegible o faltante.
+- Placa ilegible o faltante.
 
-- Quemaduras acidas o causticas.
+- Mas de 10 alambres rotos en un paso del cable o 5 alambres rotos en un solo toron de un paso del cable.
+
+- Dobladuras en el cable.
+
+- Cocas, Jaulas de pájaro o torones sueltos en el estrobo.
+
+- Desgaste excesivo.
 
 - Si no se sabe la capacidad estipulada de la eslinga así como si falta o no el legible la etiqueta identificadora de la eslinga.
 
-- Si esta quemada o dañada por algún acido o detergente.
+- Si cuenta con corrosión u oxido excesivo.
 
-- Si cuenta con algún tipo de quemadura, carbonización o residuos de soldadura.
-
-- Si tiene hoyos, rasgaduras, cortes o partículas incrustadas en la cubierta de la eslinga.
-
-- Si están dañadas o rotas las fibras interiores de la eslinga.
-
-- Demasiado desgaste por abrasivos.
-
-- Nudos en cualquier parte de la eslinga.
+- Nudos en cualquier parte del estrobo.
 
 - Accesorios en mal estado por desgaste, corrosión, roturas y deformaciones.
 
@@ -33,4 +31,6 @@ tags: ["astro", "bloguear", "aprender en público"]
 
 - Para Accesorios vea ASME B.30.26 criterios de remoción.
 
-- Cualquier condición que cause duda acerca de la capacidad de carga de la eslinga.
+- Cualquier condición que cause duda acerca de la capacidad de carga del estrobo.
+
+![Ejemplos de estrobos de cable que deben ser removidos del servicio](../../assets/post-4.png)

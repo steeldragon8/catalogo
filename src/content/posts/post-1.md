@@ -3,11 +3,12 @@ title: 'Criterios específicos para remover una eslinga sintética plana de uso'
 pubDate: 2014-10-17
 description: 'Este es la primera publicación de mi nuevo blog Astro.'
 author: 'Cabuyería'
-image: './assets/eslingas-600x600.jpg'
+cover: '../../assets/eslingas-600x600.jpg'
+coverAlt: 'Imagen de portada'
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
-## Los criterios específicos para remover una eslinga sintética plana de uso son los siguientes:
+Los criterios específicos para remover una eslinga sintética plana de uso son los siguientes:
 
 - Etiqueta ilegible o faltante.
 
@@ -34,3 +35,5 @@ tags: ["astro", "bloguear", "aprender en público"]
 - Para Accesorios vea ASME B.30.26 criterios de remoción.
 
 - Cualquier condición que cause duda acerca de la capacidad de carga de la eslinga.
+
+![Ejemplos de eslingas que deben ser removidas del servicio](../../assets/post-1.png)
