@@ -7,7 +7,7 @@
 }
 
 .button {
-    display: block;
+    /* display: block; */
     width: -moz-max-content;
     width: max-content;
     border-radius: 9999px;
@@ -60,11 +60,15 @@
     }
 }
 
-.peer:checked ~ .peer-checked\:translate-x-0 {
+.peer:checked~.peer-checked\:translate-x-0 {
     --tw-translate-x: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.peer:checked ~ .peer-checked\:bg-close-menu {
+.peer:checked~.peer-checked\:bg-close-menu {
     background-image: url('../assets/icon-close.svg');
+}
+
+.bg-open-menu {
+    background-image: url('../assets/icon-open.svg');
 }
