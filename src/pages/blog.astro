@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
+import { getCollection } from "astro:content";
+
+const allPosts = await getCollection("posts");
+---
+
+<BaseLayout pageTitle="Bitácora">
+    <main>
+        <h1 class="text-4xl text-blue-950 text-center font-semibold mt-12">Esta es la Bitácora</h1>
+        <article>
+            <div class="grid md:grid-cols-2 gap-5 py-12 mx-12">
+                {
+                    allPosts.map((post) => (
+                        <BlogPost 
+                            url={`/posts/${post.slug}`} 
+                            title={post.data.title} 
+                        />
+                    ))
+                }
+            </div>
+        </article>
+        <!-- <ul>
+            {
+                allPosts.map((post) => (
+                    <BlogPost 
+                        url={`/posts/${post.slug}`} 
+                        title={post.data.title} 
+                    />
+                ))
+            }
+        </ul> -->
+    </main>
+</BaseLayout>
