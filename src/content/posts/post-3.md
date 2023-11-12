@@ -1,9 +1,9 @@
 ---
-title: 'Criterios específicos para remover una eslinga de cadena de uso'
+title: Criterios específicos para remover una eslinga de cadena de uso
 pubDate: 2014-10-17
 description: 'Este es la primera publicación de mi nuevo blog Astro.'
 author: 'Cabuyería'
-image: './assets/eslingas-600x600.jpg'
+cover: '../../assets/eslingas-de-cadena.jpg'
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 

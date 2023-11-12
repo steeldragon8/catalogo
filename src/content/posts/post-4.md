@@ -1,9 +1,9 @@
 ---
-title: 'Criterios específicos para remover un estrobo de cable de acero de uso'
+title: Criterios específicos para remover un estrobo de cable de acero de uso
 pubDate: 2014-10-17
 description: 'Este es la primera publicación de mi nuevo blog Astro.'
 author: 'Cabuyería'
-image: './assets/eslingas-600x600.jpg'
+cover: '../../assets/estrobos-cable.webp'
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 

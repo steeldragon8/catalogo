@@ -1,10 +1,10 @@
 ---
-title: 'Criterios específicos para remover una eslinga sintética plana de uso'
+title: Criterios específicos para remover una eslinga sintética plana de uso
 pubDate: 2014-10-17
-description: 'Este es la primera publicación de mi nuevo blog Astro.'
-author: 'Cabuyería'
-cover: '../../assets/eslingas-600x600.jpg'
-coverAlt: 'Imagen de portada'
+description: Este es la primera publicación de mi nuevo blog Astro.
+author: Cabuyería
+cover: ../../assets/eslingas-600x600.jpg
+coverAlt: Imagen de portada
 tags: ["astro", "bloguear", "aprender en público"]
 ---
 
