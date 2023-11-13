@@ -12,9 +12,7 @@ const allPosts = await getCollection("posts");
 
         <section transition:animate="slide" class="wrapper text-center py-10 md:py-20 grid gap-12 md:text-left">
             <article>
-                <!-- <div class="grid gap-8 md:gap-10"> -->
                 <div class="grid gap-8 md:gap-12 md:grid-cols-3">
-                <!-- <div class="w-full rounded-t-xl overflow-hidden"> -->
                     {
                         allPosts.map((post) => (
                             <BlogPost 
