@@ -1,0 +1,36 @@
+[
+    {
+        "name": "Barra de 8 m",
+        "swl": "40 ton",
+        "wt": "1.8 ton",
+        "lght": "8 m"
+    },
+    {
+        "name": "Barra Jumbo",
+        "swl": "100 ton",
+        "wt": "1.7 ton",
+        "lght": "4.27 m"
+    },
+    {
+        "name": "Barra Mixta",
+        "swl": "40 ton",
+        "wt": "350 kg",
+        "lght": "6 m"
+    },
+    {
+        "name": "Barra para autos",
+        "swl": "5 ton",
+        "wt": "90 kg",
+        "lght": ""
+    },
+    {
+        "name": "Barra aumento para vagones",
+        "swl": "20 ton",
+        "wt": "490 kg"
+    },
+    {
+        "name": "Barra aumento para contenedores",
+        "swl": "20 Ton",
+        "wt": "125 kg"
+    }
+]

@@ -27,7 +27,13 @@ const { frontmatter } = Astro.props;
                 <div class="flex flex-row justify-between mb-8">
                     <p>
                         Fecha de publicación: {
-                            frontmatter.pubDate.toString().slice(0, 10)
+                            frontmatter.pubDate.toLocaleDateString(
+                                'es-mx', {
+                                    year: 'numeric',
+			                        month: 'long',
+			                        day: 'numeric',
+		                        }
+                            )
                         }
                     </p>
                     <p>

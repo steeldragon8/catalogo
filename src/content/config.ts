@@ -15,7 +15,19 @@ const postsCollection = defineCollection({
         })
 });
 
+const spreadersCollection = defineCollection({
+    type: 'data',
+    schema: ({ image }) =>
+        z.object({
+            name: z.string(),
+            swl: z.string(),
+            wt: z.string(),
+            image: image()
+        })
+});
+
 // Exporta un solo objeto `collections` con las colecciones registradas
 export const collections = {
     posts: postsCollection,
+    spreaders: spreadersCollection,
 };

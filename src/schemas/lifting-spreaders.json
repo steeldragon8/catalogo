@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Separador corto",
+        "swl": "20 ton",
+        "wt": "132 kg",
+        "lgth": "1.50 m"
+    },
+    {
+        "name": "Separador largo",
+        "swl": "25 ton",
+        "wt": "350 kg",
+        "lgth": "3.50 m"
+    }
+]

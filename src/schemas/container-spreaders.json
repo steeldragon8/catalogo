@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Spreader para contendor de 20'",
+        "swl": "30 ton",
+        "wt": "1.5 ton",
+        "image": "/spreader.jpeg"
+    },
+    {
+        "name": "Spreader para contendor de 40'",
+        "swl": "42 ton",
+        "wt": "3 ton",
+        "image": "/spreader.jpeg"
+    },
+    {
+        "name": "Spreader para tubo",
+        "swl": "20 ton",
+        "wt": "400 kg",
+        "image": "/spreader.jpeg"
+    }
+]
