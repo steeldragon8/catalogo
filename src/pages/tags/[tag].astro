@@ -1,5 +1,4 @@
 ---
-import type { GetStaticPaths } from "astro";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import BlogPost from "../../components/BlogPost.astro";
 import { getCollection } from "astro:content";
@@ -34,14 +33,18 @@ const { posts } = Astro.props;
 ---
 
 <BaseLayout pageTitle={ tag }>
-    <p>Entradas etiquetadas con { tag }</p>
+    <p>Documentos técnicos etiquetados con { tag }</p>
     <ul>
         {
             posts.map(
-                (post) => <BlogPost
-                        url={`/posts/${post.slug}/`}
-                        title={post.data.title}
-                    />
+                (post) => (
+                        <BlogPost
+                            url={`/posts/${post.slug}/`}
+                            title={post.data.title}
+                            /* url={"/posts/" + post.slug}
+                            title={post.data.title} */
+                        />
+                    )
             )
         }
     </ul>

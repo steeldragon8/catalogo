@@ -4,51 +4,26 @@ import { Image } from "astro:assets";
 const { title, url, img } = Astro.props;
 ---
 
-<!-- <div>
-    <a href={ url }>
-        <Image
-            src={img}
-            alt={title}
-            width={600}
-            height={600 / 1.5 }
-            class="rounded-2xl shadow-xl mb-6 aspect-thumbnail object-cover"
-        />
-    </a>
-
-    <a 
-        href={ url }
-        class="text-4xl text-zinc-900 mt-4 mb-6 font-semibold inline-block"
-    >
-
-        { title }
-    </a>
-</div> -->
 <div>
-    <div class="w-full rounded-t-xl overflow-hidden">
-        <a href={ url }>
-            <Image
+    <div class="w-full bg-blue-800 py-1 rounded-t-xl overflow-hidden">
+        <a href={url}>
+            <!-- <Image
                 src={img}
                 alt={title}
-                width={600}
+                width={ 600 }
                 height={600 / 1.5 }
                 class="transition-all duration-700 hover:scale-125 w-full"
-            />
+            /> -->
         </a>
     </div>
 
-    <div class="py-14 px-16 md:py-10 md:px-12 bg-gray-200 rounded-b-xl">
+    <div class="py-14 px-16 md:py-10 md:px-12 bg-gray-200 rounded-b-xl hover:bg-blue-200 hover:text-blue-950 hover:underline">
         <a 
-            href={ url }
+            href={url}
             class="text-3xl md:text-lg lg:text-2xl text-zinc-900"
         >
         
-            { title }
+            {title}
         </a>
     </div>
 </div>
-
-<!-- <li>
-    <a href={ url }>
-        { title }
-    </a>
-</li> -->

@@ -6,7 +6,7 @@ import { getCollection } from "astro:content";
 const allPosts = await getCollection("posts");
 ---
 
-<BaseLayout pageTitle="Bitácora">
+<BaseLayout pageTitle="Soporte">
     <main>
         <h1 transition:animate="slide" class="text-4xl text-blue-950 text-center font-semibold mt-12 md:mt-16">Documentos técnicos</h1>
 
@@ -18,7 +18,7 @@ const allPosts = await getCollection("posts");
                             <BlogPost 
                                 url={`/posts/${post.slug}`} 
                                 title={post.data.title} 
-                                img={post.data.cover}
+                                /* img={post.data.cover} */
                             />
                         ))
                     }
