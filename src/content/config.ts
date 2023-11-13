@@ -26,8 +26,46 @@ const spreadersCollection = defineCollection({
         })
 });
 
+const liftingSpreadersCollection = defineCollection({
+    type: 'content',
+    schema: ({ image }) =>
+        z.object({
+            name: z.string(),
+            swl: z.string(),
+            wt: z.string(),
+            lgth: z.string(),
+            image: image()
+        })
+});
+
+const liftingBarsCollection = defineCollection({
+    type: 'content',
+    schema: ({ image }) =>
+        z.object({
+            name: z.string(),
+            swl: z.string(),
+            wt: z.string(),
+            lgth: z.string(),
+            image: image()
+        })
+});
+
+const liftingManoeuvresCollection = defineCollection({
+    type: 'content',
+    schema: ({ image }) =>
+        z.object({
+            name: z.string(),
+            swl: z.string(),
+            wt: z.string(),
+            image: image()
+        })
+});
+
 // Exporta un solo objeto `collections` con las colecciones registradas
 export const collections = {
     posts: postsCollection,
     spreaders: spreadersCollection,
+    liftingSpreaders: liftingSpreadersCollection,
+    liftingBars: liftingBarsCollection,
+    liftingManoeuvres: liftingManoeuvresCollection
 };

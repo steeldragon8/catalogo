@@ -2,14 +2,18 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 import ContainerSpreader from "../components/ContainerSpreader.astro";
-import containerData from "../schemas/container-spreaders.json";
+import LiftingSpreader from "../components/LiftingSpreader.astro";
+/* import containerData from "../schemas/container-spreaders.json"; */
 
 const allSpreaders = await getCollection("spreaders");
+const allLiftingSpreaders = await getCollection("liftingSpreaders");
+const allLiftingBars = await getCollection("liftingBars");
+const allLiftingManoeuvres = await getCollection("liftingManoeuvres");
 ---
 
 <BaseLayout pageTitle="Soporte">
     <main>
-        <h1 transition:animate="slide" class="text-4xl text-blue-950 text-center font-semibold mt-12 md:mt-16">Spreaders y Separadores</h1>
+        <h1 transition:animate="slide" class="text-4xl text-blue-950 text-center font-semibold mt-12 md:mt-16">Spreaders</h1>
 
         <section transition:animate="slide" class="wrapper text-center py-16 md:py-20 grid gap-12 md:text-left">
             <article>
@@ -36,6 +40,59 @@ const allSpreaders = await getCollection("spreaders");
                             
                         ))
                     } -->
+                </div>
+            </article>
+
+            <article>
+                <h2 transition:animate="slide" class="text-4xl text-blue-950 text-center font-semibold mt-12 md:mt-16 mb-16">Separadores</h2>
+
+                <div class="grid gap-8 md:gap-12 md:grid-cols-1 lg:grid-cols-2">
+                    {
+                        allLiftingSpreaders.map((liftingSpreader: any) => (
+                            <LiftingSpreader 
+                                name={liftingSpreader.data.name} 
+                                swl={liftingSpreader.data.swl}
+                                wt={liftingSpreader.data.wt}
+                                lgth={liftingSpreader.data.lgth}
+                                image={liftingSpreader.data.image}
+                            />
+                        ))
+                    }
+                </div>
+            </article>
+
+            <article>
+                <h2 transition:animate="slide" class="text-4xl text-blue-950 text-center font-semibold mt-12 md:mt-16 mb-16">Barras</h2>
+
+                <div class="grid gap-8 md:gap-12 md:grid-cols-1 lg:grid-cols-2">
+                    {
+                        allLiftingBars.map((liftingBar: any) => (
+                            <LiftingSpreader 
+                                name={liftingBar.data.name} 
+                                swl={liftingBar.data.swl}
+                                wt={liftingBar.data.wt}
+                                lgth={liftingBar.data.lgth}
+                                image={liftingBar.data.image}
+                            />
+                        ))
+                    }
+                </div>
+            </article>
+
+            <article>
+                <h2 transition:animate="slide" class="text-4xl text-blue-950 text-center font-semibold mt-12 md:mt-16 mb-16">Otras maniobras</h2>
+
+                <div class="grid gap-8 md:gap-12 md:grid-cols-1 lg:grid-cols-2">
+                    {
+                        allLiftingManoeuvres.map((liftingManoeuvre: any) => (
+                            <ContainerSpreader 
+                                name={liftingManoeuvre.data.name} 
+                                swl={liftingManoeuvre.data.swl}
+                                wt={liftingManoeuvre.data.wt}
+                                image={liftingManoeuvre.data.image}
+                            />
+                        ))
+                    }
                 </div>
             </article>
         </section>
