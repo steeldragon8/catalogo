@@ -3,13 +3,14 @@ import { Image } from "astro:assets";
 
 export interface Props {
     name: string;
+    pin: string;
     swl: string;
     wt: string;
-    lgth: string
+    df: string
     image: string;
 }
 
-const { name, swl, wt, lgth, image } = Astro.props;
+const { name, pin, swl, wt, df, image } = Astro.props;
 ---
 
 <div class="md:grid grid-cols-[1fr_2fr]">
@@ -31,10 +32,13 @@ const { name, swl, wt, lgth, image } = Astro.props;
             Capacidad: { swl }
         </p>
         <p class="text-2xl lg:text-lg text-zinc-900">
-            Tara: { wt }
+            Perno: { pin }
         </p>
         <p class="text-2xl lg:text-lg text-zinc-900">
-            Longitud: { lgth }
+            Peso: { wt }
+        </p>
+        <p class="text-2xl lg:text-lg text-zinc-900">
+            Factor de diseño: { df }
         </p>
     </div>
 </div>

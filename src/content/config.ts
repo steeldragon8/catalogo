@@ -61,11 +61,38 @@ const liftingManoeuvresCollection = defineCollection({
         })
 });
 
+const hooksCollection = defineCollection({
+    type: 'content',
+    schema: ({ image }) =>
+        z.object({
+            name: z.string(),
+            swl: z.string(),
+            wt: z.string(),
+            df: z.string(),
+            image: image()
+        })
+});
+
+const shacklesCollection = defineCollection({
+    type: 'content',
+    schema: ({ image }) =>
+        z.object({
+            name: z.string(),
+            swl: z.string(),
+            pin: z.string(),
+            wt: z.string(),
+            df: z.string(),
+            image: image()
+        })
+});
+
 // Exporta un solo objeto `collections` con las colecciones registradas
 export const collections = {
     posts: postsCollection,
     spreaders: spreadersCollection,
     liftingSpreaders: liftingSpreadersCollection,
     liftingBars: liftingBarsCollection,
-    liftingManoeuvres: liftingManoeuvresCollection
+    liftingManoeuvres: liftingManoeuvresCollection,
+    hooks: hooksCollection,
+    shackles: shacklesCollection
 };
