@@ -16,7 +16,7 @@ const postsCollection = defineCollection({
 });
 
 const spreadersCollection = defineCollection({
-    type: 'data',
+    type: 'content',
     schema: ({ image }) =>
         z.object({
             name: z.string(),
