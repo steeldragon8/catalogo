@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import MiscTool from "../components/MiscTool.astro";
+
+const allMiscTools = await getCollection("miscTools");
+
+/* const chains = await getCollection("chains", ({ data }) => {
+    return data.name.includes("Cadena Spectrum 8");
+});
+const spreaderAccs = await getCollection("chains", ({ data }) => {
+    return data.name.includes("Aumento para spreader");
+}); */
+---
+
+<BaseLayout pageTitle="Herramientas varias">
+    <main>
+        <h1
+            transition:animate="slide"
+            class="text-4xl text-blue-950 text-center font-semibold mt-12 md:mt-16"
+        >
+            Herramientas varias
+        </h1>
+
+        <section
+            transition:animate="slide"
+            class="wrapper text-center py-16 md:py-20 grid gap-12 md:text-left"
+        >
+            <article>
+                <div class="grid gap-8 md:gap-12 md:grid-cols-1 lg:grid-cols-2">
+                    {
+                        allMiscTools.map((miscTool: any) => (
+                            <MiscTool
+                                name={miscTool.data.name}
+                                image={miscTool.data.image}
+                            />
+                        ))
+                    }
+                </div>
+            </article>
+        </section>
+    </main>
+</BaseLayout>

@@ -124,6 +124,15 @@ const chainsCollection = defineCollection({
         })
 });
 
+const miscToolsCollection = defineCollection({
+    type: 'content',
+    schema: ({ image }) =>
+        z.object({
+            name: z.string(),
+            image: image()
+        })
+});
+
 // Exporta un solo objeto `collections` con las colecciones registradas
 export const collections = {
     posts: postsCollection,
@@ -135,5 +144,6 @@ export const collections = {
     shackles: shacklesCollection,
     steelCableSlings: steelCableSlingsCollection,
     syntheticSlings: syntheticSlingsCollection,
-    chains: chainsCollection
+    chains: chainsCollection,
+    miscTools: miscToolsCollection
 };
