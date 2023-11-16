@@ -1,0 +1,109 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import SteelCableSling from "../components/SteelCableSling.astro";
+import LiftingHooks from "../components/Hook.astro";
+import LiftingShackle from "../components/Shackle.astro";
+
+/* const steelCableSlingsEE = await getCollection("steelCableSlings"); */
+const steelCableSlingsEE = await getCollection("steelCableSlings", ({ data }) => {
+    return data.ends.endsWith("Ojo estándar - Ojo estándar");
+});
+const steelCableSlingsET = await getCollection("steelCableSlings", ({ data }) => {
+    return data.ends.includes("Ojo estándar - Ojo con rozadera");
+});
+const steelCableSlingsEH = await getCollection("steelCableSlings", ({ data }) => {
+    return data.ends.includes("Ojo estándar - Ojo con gancho");
+});
+const steelCableSlingsTT = await getCollection("steelCableSlings", ({ data }) => {
+    return data.ends.includes("Ojo con rozadera - Ojo con rozadera");
+});
+const allHooks = await getCollection("hooks");
+const allShackles = await getCollection("shackles");
+---
+
+<BaseLayout pageTitle="Estrobos">
+    <main>
+        <h1 transition:animate="slide" class="text-4xl text-blue-950 text-center font-semibold mt-12 md:mt-16">Estrobos con extremos ojo estándar - ojo estándar</h1>
+
+        <section transition:animate="slide" class="wrapper text-center py-16 md:py-20 grid gap-12 md:text-left">
+            <article>
+                <div class="grid gap-8 md:gap-12 md:grid-cols-1 lg:grid-cols-2">
+                    {
+                        steelCableSlingsEE.map((ee) => (
+                            <SteelCableSling 
+                                name={ee.data.name}
+                                ends={ee.data.ends} 
+                                dia={ee.data.dia}
+                                lgth={ee.data.lgth}
+                                swl={ee.data.swl}
+                                wt={ee.data.wt}
+                                image={ee.data.image}
+                            />
+                        ))
+                    }
+                </div>
+            </article>
+
+            <article>
+                <h2 transition:animate="slide" class="text-4xl text-blue-950 text-center font-semibold mt-12 md:mt-16 mb-16">Estrobos con extremos ojo estándar - ojo con rozadera</h2>
+
+                <div class="grid gap-8 md:gap-12 md:grid-cols-1 lg:grid-cols-2">
+                    {
+                        steelCableSlingsET.map((et: any) => (
+                        <SteelCableSling 
+                                name={et.data.name} 
+                                ends={et.data.ends}
+                                dia={et.data.dia}
+                                lgth={et.data.lgth}
+                                swl={et.data.swl}
+                                wt={et.data.wt}
+                                image={et.data.image}
+                            />
+                        ))
+                    }
+                </div>
+            </article>
+
+            <article>
+                <h2 transition:animate="slide" class="text-4xl text-blue-950 text-center font-semibold mt-12 md:mt-16 mb-16">Estrobos con extremos ojo estándar - ojo con gancho</h2>
+
+                <div class="grid gap-8 md:gap-12 md:grid-cols-1 lg:grid-cols-2">
+                    {
+                        steelCableSlingsEH.map((eh: any) => (
+                        <SteelCableSling 
+                                name={eh.data.name} 
+                                ends={eh.data.ends}
+                                dia={eh.data.dia}
+                                lgth={eh.data.lgth}
+                                swl={eh.data.swl}
+                                wt={eh.data.wt}
+                                image={eh.data.image}
+                            />
+                        ))
+                    }
+                </div>
+            </article>
+
+            <article>
+                <h2 transition:animate="slide" class="text-4xl text-blue-950 text-center font-semibold mt-12 md:mt-16 mb-16">Estrobos con extremos ojo con rozadera - ojo con rozadera</h2>
+
+                <div class="grid gap-8 md:gap-12 md:grid-cols-1 lg:grid-cols-2">
+                    {
+                        steelCableSlingsTT.map((tt: any) => (
+                        <SteelCableSling 
+                                name={tt.data.name} 
+                                ends={tt.data.ends}
+                                dia={tt.data.dia}
+                                lgth={tt.data.lgth}
+                                swl={tt.data.swl}
+                                wt={tt.data.wt}
+                                image={tt.data.image}
+                            />
+                        ))
+                    }
+                </div>
+            </article>
+        </section>
+    </main>
+</BaseLayout>

@@ -68,7 +68,6 @@ const hooksCollection = defineCollection({
             name: z.string(),
             swl: z.string(),
             wt: z.string(),
-            df: z.string(),
             image: image()
         })
 });
@@ -81,7 +80,20 @@ const shacklesCollection = defineCollection({
             swl: z.string(),
             pin: z.string(),
             wt: z.string(),
-            df: z.string(),
+            image: image()
+        })
+});
+
+const steelCableSlingsCollection = defineCollection({
+    type: 'content',
+    schema: ({ image }) =>
+        z.object({
+            name: z.string(),
+            ends: z.string(),
+            dia: z.string(),
+            lgth: z.string(),
+            swl: z.string(),
+            wt: z.string(),
             image: image()
         })
 });
@@ -94,5 +106,6 @@ export const collections = {
     liftingBars: liftingBarsCollection,
     liftingManoeuvres: liftingManoeuvresCollection,
     hooks: hooksCollection,
-    shackles: shacklesCollection
+    shackles: shacklesCollection,
+    steelCableSlings: steelCableSlingsCollection
 };
