@@ -98,6 +98,32 @@ const steelCableSlingsCollection = defineCollection({
         })
 });
 
+const syntheticSlingsCollection = defineCollection({
+    type: 'content',
+    schema: ({ image }) =>
+        z.object({
+            name: z.string(),
+            type: z.string(),
+            w: z.string(),
+            lgth: z.string(),
+            swl: z.string(),
+            image: image()
+        })
+});
+
+const chainsCollection = defineCollection({
+    type: 'content',
+    schema: ({ image }) =>
+        z.object({
+            name: z.string(),
+            alloy: z.string(),
+            size: z.string(),
+            lgth: z.string(),
+            swl: z.string(),
+            image: image()
+        })
+});
+
 // Exporta un solo objeto `collections` con las colecciones registradas
 export const collections = {
     posts: postsCollection,
@@ -107,5 +133,7 @@ export const collections = {
     liftingManoeuvres: liftingManoeuvresCollection,
     hooks: hooksCollection,
     shackles: shacklesCollection,
-    steelCableSlings: steelCableSlingsCollection
+    steelCableSlings: steelCableSlingsCollection,
+    syntheticSlings: syntheticSlingsCollection,
+    chains: chainsCollection
 };

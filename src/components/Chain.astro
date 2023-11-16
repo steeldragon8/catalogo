@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+
+export interface Props {
+    name: string;
+    alloy?: string;
+    size?: string;
+    lgth?: string;
+    swl: string;
+    image: string;
+}
+
+const { name, alloy, size, lgth, swl, image } = Astro.props;
+---
+
+<div class="md:grid grid-cols-[1fr_2fr]">
+    <div class="w-full rounded-t-xl md:rounded-tr-none md:rounded-l-xl overflow-hidden border border-solid border-gray-200">
+        <Image
+            src={image}
+            alt={name}
+            width={1000}
+            height={1000}
+            class="transition-all duration-700 hover:scale-125 w-full h-full"
+        />
+    </div>
+    
+    <div class="py-8 px-4 md:py-10 md:px-12 bg-gray-200 rounded-b-xl md:rounded-bl-none md:rounded-r-xl hover:bg-blue-200 hover:text-blue-950">
+        <p class="text-2xl lg:text-lg font-semibold text-zinc-900">
+            { name }
+        </p>
+        <p class="text-2xl lg:text-lg text-zinc-900">
+            Aleación: { alloy }
+        </p>
+        <p class="text-2xl lg:text-lg text-zinc-900">
+            Diámetro de eslabón: { size }
+        </p>
+        <p class="text-2xl lg:text-lg text-zinc-900">
+            Longitud: { lgth }
+        </p>
+        <p class="text-2xl lg:text-lg text-zinc-900">
+            Capacidad: { swl }
+        </p>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import Chain from "../components/Chain.astro";
+import SprederAcc from "../components/SpreaderAcc.astro";
+
+const chains = await getCollection("chains", ({ data }) => {
+    return data.name.includes("Cadena Spectrum 8");
+});
+const spreaderAccs = await getCollection("chains", ({ data }) => {
+    return data.name.includes("Aumento para spreader");
+});
+---
+
+<BaseLayout pageTitle="Estrobos">
+    <main>
+        <h1
+            transition:animate="slide"
+            class="text-4xl text-blue-950 text-center font-semibold mt-12 md:mt-16"
+        >
+            Cadenas de aleación grado 80
+        </h1>
+
+        <section
+            transition:animate="slide"
+            class="wrapper text-center py-16 md:py-20 grid gap-12 md:text-left"
+        >
+            <article>
+                <div class="grid gap-8 md:gap-12 md:grid-cols-1 lg:grid-cols-2">
+                    {
+                        chains.map((chain: any) => (
+                            <Chain
+                                name={chain.data.name}
+                                alloy={chain.data.alloy}
+                                size={chain.data.size}
+                                lgth={chain.data.lgth}
+                                swl={chain.data.swl}
+                                image={chain.data.image}
+                            />
+                        ))
+                    }
+                </div>
+            </article>
+
+            <article>
+                <h2
+                    transition:animate="slide"
+                    class="text-4xl text-blue-950 text-center font-semibold mt-12 md:mt-16 mb-16"
+                >
+                    Aumento para spreader
+                </h2>
+
+                <div class="grid gap-8 md:gap-12 md:grid-cols-1 lg:grid-cols-2">
+                    {
+                        spreaderAccs.map((spreaderAcc: any) => (
+                            <SprederAcc
+                                name={spreaderAcc.data.name}
+                                alloy={spreaderAcc.data.type}
+                                size={spreaderAcc.data.w}
+                                lgth={spreaderAcc.data.lgth}
+                                swl={spreaderAcc.data.swl}
+                                image={spreaderAcc.data.image}
+                            />
+                        ))
+                    }
+                </div>
+            </article>
+        </section>
+    </main>
+</BaseLayout>

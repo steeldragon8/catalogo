@@ -1,0 +1,96 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import SyntheticSling from "../components/SyntheticSling.astro";
+
+const flatSlings = await getCollection("syntheticSlings", ({ data }) => {
+    return data.type.includes("Plana Ojo - Ojo");
+});
+const roundSlings = await getCollection("syntheticSlings", ({ data }) => {
+    return data.type.includes("Redonda Sin-Fin");
+});
+const steelSlings = await getCollection("syntheticSlings", ({ data }) => {
+    return data.type.includes("De acero");
+});
+---
+
+<BaseLayout pageTitle="Estrobos">
+    <main>
+        <h1
+            transition:animate="slide"
+            class="text-4xl text-blue-950 text-center font-semibold mt-12 md:mt-16"
+        >
+            Eslingas de poliéster planas
+        </h1>
+
+        <section
+            transition:animate="slide"
+            class="wrapper text-center py-16 md:py-20 grid gap-12 md:text-left"
+        >
+            <article>
+                <div class="grid gap-8 md:gap-12 md:grid-cols-1 lg:grid-cols-2">
+                    {
+                        flatSlings.map((flatSling: any) => (
+                            <SyntheticSling
+                                name={flatSling.data.name}
+                                type={flatSling.data.type}
+                                w={flatSling.data.w}
+                                lgth={flatSling.data.lgth}
+                                swl={flatSling.data.swl}
+                                image={flatSling.data.image}
+                            />
+                        ))
+                    }
+                </div>
+            </article>
+
+            <article>
+                <h2
+                    transition:animate="slide"
+                    class="text-4xl text-blue-950 text-center font-semibold mt-12 md:mt-16 mb-16"
+                >
+                    Eslingas de poliéster redondas
+                </h2>
+
+                <div class="grid gap-8 md:gap-12 md:grid-cols-1 lg:grid-cols-2">
+                    {
+                        roundSlings.map((roundSling: any) => (
+                            <SyntheticSling
+                                name={roundSling.data.name}
+                                type={roundSling.data.type}
+                                w={roundSling.data.w}
+                                lgth={roundSling.data.lgth}
+                                swl={roundSling.data.swl}
+                                image={roundSling.data.image}
+                            />
+                        ))
+                    }
+                </div>
+            </article>
+
+            <article>
+                <h2
+                    transition:animate="slide"
+                    class="text-4xl text-blue-950 text-center font-semibold mt-12 md:mt-16 mb-16"
+                >
+                    Eslingas de acero
+                </h2>
+
+                <div class="grid gap-8 md:gap-12 md:grid-cols-1 lg:grid-cols-2">
+                    {
+                        steelSlings.map((steelSling: any) => (
+                            <SyntheticSling
+                                name={steelSling.data.name}
+                                type={steelSling.data.type}
+                                w={steelSling.data.w}
+                                lgth={steelSling.data.lgth}
+                                swl={steelSling.data.swl}
+                                image={steelSling.data.image}
+                            />
+                        ))
+                    }
+                </div>
+            </article>
+        </section>
+    </main>
+</BaseLayout>
