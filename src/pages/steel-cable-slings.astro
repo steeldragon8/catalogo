@@ -2,8 +2,6 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
 import SteelCableSling from "../components/SteelCableSling.astro";
-import LiftingHooks from "../components/Hook.astro";
-import LiftingShackle from "../components/Shackle.astro";
 
 /* const steelCableSlingsEE = await getCollection("steelCableSlings"); */
 const steelCableSlingsEE = await getCollection("steelCableSlings", ({ data }) => {
@@ -18,8 +16,6 @@ const steelCableSlingsEH = await getCollection("steelCableSlings", ({ data }) =>
 const steelCableSlingsTT = await getCollection("steelCableSlings", ({ data }) => {
     return data.ends.includes("Ojo con rozadera - Ojo con rozadera");
 });
-const allHooks = await getCollection("hooks");
-const allShackles = await getCollection("shackles");
 ---
 
 <BaseLayout pageTitle="Estrobos">
@@ -30,7 +26,7 @@ const allShackles = await getCollection("shackles");
             <article>
                 <div class="grid gap-8 md:gap-12 md:grid-cols-1 lg:grid-cols-2">
                     {
-                        steelCableSlingsEE.map((ee) => (
+                        steelCableSlingsEE.map((ee: any) => (
                             <SteelCableSling 
                                 name={ee.data.name}
                                 ends={ee.data.ends} 
@@ -51,7 +47,7 @@ const allShackles = await getCollection("shackles");
                 <div class="grid gap-8 md:gap-12 md:grid-cols-1 lg:grid-cols-2">
                     {
                         steelCableSlingsET.map((et: any) => (
-                        <SteelCableSling 
+                            <SteelCableSling 
                                 name={et.data.name} 
                                 ends={et.data.ends}
                                 dia={et.data.dia}
