@@ -2,11 +2,11 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { Image } from "astro:assets";
 import containers from "../assets/containers.jpg"
-import fetter from "../assets/fetter.webp"
-import steelCableSling from "../assets/steel-cable-sling.jpg"
-import slings from "../assets/slings.jpg"
-import steelChains from "../assets/steel-chains.webp"
-import accesories from "../assets/accesories.jpg"
+import shackles from "../assets/shackles.jpeg"
+import cableSling from "../assets/cable-sling.jpeg"
+import polyesterSlings from "../assets/polyester-slings.jpeg"
+import steelChains from "../assets/steel-chains.jpeg"
+import accesories from "../assets/misc-tools.jpeg"
 ---
 
 <BaseLayout pageTitle="Catálogo">
@@ -33,7 +33,7 @@ import accesories from "../assets/accesories.jpg"
                 <div class="w-full rounded-t-xl overflow-hidden">
                     <a href="/hooks">
                         <Image 
-                            src={fetter}
+                            src={shackles}
                             alt="Carga y Descarga de Contenedores"
                             class="transition-all duration-700 hover:scale-125 w-full"
                         />
@@ -49,7 +49,7 @@ import accesories from "../assets/accesories.jpg"
                 <div class="w-full rounded-t-xl overflow-hidden">
                     <a href="/steel-cable-slings">
                         <Image 
-                            src={steelCableSling}
+                            src={cableSling}
                             alt="Carga y Descarga de Contenedores"
                             class="transition-all duration-700 hover:scale-125 w-full"
                         />
@@ -65,7 +65,7 @@ import accesories from "../assets/accesories.jpg"
                 <div class="w-full rounded-t-xl overflow-hidden">
                     <a href="/synthetic-slings">
                         <Image 
-                            src={slings}
+                            src={polyesterSlings}
                             alt="Carga y Descarga de Contenedores"
                             class="transition-all duration-700 hover:scale-125 w-full"
                         />

@@ -2,9 +2,9 @@
 title: Criterios específicos para remover una eslinga de cadena de uso
 pubDate: 2014-10-17
 description: Este es la primera publicación de mi nuevo blog Astro.
-author: Abraham López
+author: abraham-lopez
 cover: ../../assets/eslingas-de-cadena.jpg
-tags: ["astro", "bloguear", "aprender en público"]
+tags: Manual
 ---
 
 Las eslingas de cadena deben de retirarse de servicio si se presenta lo siguiente:

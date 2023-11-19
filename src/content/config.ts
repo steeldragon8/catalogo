@@ -1,5 +1,5 @@
 // Importa las utilidades de `astro:content`
-import { z, defineCollection } from "astro:content";
+import { z, defineCollection, reference } from "astro:content";
 
 // Define un `type` y un `schema` para cada colección
 const postsCollection = defineCollection({
@@ -9,9 +9,21 @@ const postsCollection = defineCollection({
             title: z.string(),
             pubDate: z.date(),
             description: z.string(),
-            author: z.string(),
+            /* author: z.string(), */
+            author: reference("team"),
             cover: image(),
-            tags: z.array(z.string())
+            tags: z.string()
+        })
+});
+
+const teamCollection = defineCollection({
+    type: 'data',
+    schema: ({ image }) => 
+        z.object({
+            name: z.string(),
+            email: z.string(),
+            role: z.string(),
+            headshot: image(),
         })
 });
 
@@ -136,6 +148,7 @@ const miscToolsCollection = defineCollection({
 // Exporta un solo objeto `collections` con las colecciones registradas
 export const collections = {
     posts: postsCollection,
+    team: teamCollection,
     spreaders: spreadersCollection,
     liftingSpreaders: liftingSpreadersCollection,
     liftingBars: liftingBarsCollection,

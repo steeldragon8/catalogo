@@ -2,9 +2,9 @@
 title: Criterios específicos para remover una eslinga redonda de uso
 pubDate: 2014-10-17
 description: Este es la primera publicación de mi nuevo blog Astro.
-author: Abraham López
+author: abraham-lopez
 cover: ../../assets/eslingas-redondas.jpg
-tags: ["astro", "bloguear", "aprender en público"]
+tags: Refencias Técnicas
 ---
 
 Las eslingas redondas deben de retirarse de servicio si se presenta lo siguiente:

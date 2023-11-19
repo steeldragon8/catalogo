@@ -2,9 +2,9 @@
 title: Criterios específicos para remover un estrobo de cable de acero de uso
 pubDate: 2014-10-17
 description: Este es la primera publicación de mi nuevo blog Astro.
-author: Abraham López
+author: abraham-lopez
 cover: ../../assets/estrobos-cable.webp
-tags: ["astro", "bloguear", "aprender en público"]
+tags: Guías Técnicas
 ---
 
 Los estrobos de cabe de acero deben de retirarse de servicio si se presenta lo siguiente:

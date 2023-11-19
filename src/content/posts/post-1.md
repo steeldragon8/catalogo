@@ -2,10 +2,10 @@
 title: Criterios específicos para remover una eslinga sintética plana de uso
 pubDate: 2014-10-17
 description: Este es la primera publicación de mi nuevo blog Astro.
-author: Abraham López
+author: abraham-lopez
 cover: ../../assets/eslingas-600x600.jpg
 coverAlt: Imagen de portada
-tags: ["astro", "bloguear", "aprender en público"]
+tags: Guías Técnicas
 ---
 
 Los criterios específicos para remover una eslinga sintética plana de uso son los siguientes:

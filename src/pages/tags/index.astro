@@ -12,18 +12,27 @@ const tags = [
     ];
 ---
 
-<BaseLayout pageTitle="Etiquetas">
-    <div class="flex flex-wrap">
-        {
-            tags.map(
-                (tag) => (
-                    <p class="m-1 border-dotted border-[1px] border-blue-800 rounded-lg text-base bg-blue-200">
-                        <a href={`/tags/${tag}`}>
-                            { tag }
-                        </a>
-                    </p>
-                )
-            )
-        }
-    </div>
+<BaseLayout pageTitle="Categorías">
+    <main>
+        <h1 transition:animate="slide" class="text-4xl text-blue-950 text-center font-semibold mt-12 md:mt-16">Categorías</h1>
+
+        <section transition:animate="slide" class="wrapper text-center py-10 md:py-20 grid gap-12 md:text-left">
+            <article class="flex items-center justify-center h-screen">
+                <!-- <div class="grid gap-8 md:gap-12 md:grid-cols-3"> -->
+                <div class="flex flex-wrap gap-6"> 
+                    {
+                        tags.map(
+                            (tag) => (
+                                <p class="py-2 px-4 border-solid border-[1px] border-gray-500 hover:border-blue-950 rounded-lg text-base bg-white hover:bg-blue-200">
+                                    <a href={`/tags/${tag}`}>
+                                        { tag }
+                                    </a>
+                                </p>
+                            )
+                        )
+                    }
+                </div>
+            </article>
+        </section>
+    </main>
 </BaseLayout>
